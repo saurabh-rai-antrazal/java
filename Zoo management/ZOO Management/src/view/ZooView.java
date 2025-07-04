@@ -40,7 +40,6 @@ public class ZooView {
         System.out.println(Const.ZOO_MESSAGES[0]);
         printAnimalsName();
         opt = chooseOption(Const.ANIMALS_LIST.length + 1);
-        if(opt == 13) return;
 
         String name = Const.ANIMALS_LIST[opt - 1][0];
         String category = Const.ANIMALS_LIST[opt - 1][1];
