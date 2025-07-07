@@ -1,4 +1,3 @@
-import controller.MainController;
 import utils.constant.Const;
 import view.MainView;
 

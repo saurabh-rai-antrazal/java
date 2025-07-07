@@ -43,7 +43,7 @@ public class InputValidator {
     }
 
     public static boolean isValidUsername(String un){
-        return Pattern.matches("^[A-Za-z]{1}[a-zA-Z0-9]{3,29}$", un);
+        return Pattern.matches("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]{5,10}$", un);
     }
 
     public static boolean isValidBooleanCharacter(String ch){
