@@ -100,7 +100,7 @@ public class Const {
 
     // ANIMAL STATEMENTS
     public static final String SUCCESS_ANIMAL_ADDED = "Animal added to the zoo.";
-    public static final String ERROR_NO_ZONE_AVAILABLE = "No %s zone available in this zoo. Cannot add %s.\n";
+    public static final String ERROR_NO_ZONE_AVAILABLE = "There is no available space to add this animal to the zoo.";
     public static final String SUCCESS_ANIMAL_REMOVED = "Animal removed successfully.";
 
 

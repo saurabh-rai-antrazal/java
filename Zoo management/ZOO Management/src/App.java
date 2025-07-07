@@ -1,5 +1,6 @@
 import controller.MainController;
 import utils.constant.Const;
+import view.MainView;
 
 /*
 *********************************************************************************************************
@@ -15,6 +16,6 @@ import utils.constant.Const;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println(Const.WELCOME);
-        MainController.mainController();
+        MainView.loginAndSignup();
     }
 }

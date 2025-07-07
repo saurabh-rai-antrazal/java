@@ -22,12 +22,13 @@ public class DB {
 
     private static Connection db;
 
+    private DB() {}
+
     public static Connection connect() {
         if(db == null){
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 db = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-                /* System.out.println("Connected to utils.database"); */
             } catch (ClassNotFoundException e) {
                 System.out.println("Error: " + e.getMessage());
             } catch (SQLException e) {

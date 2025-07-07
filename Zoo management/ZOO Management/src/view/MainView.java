@@ -1,5 +1,6 @@
 package view;
 
+import controller.MainController;
 import utils.constant.Const;
 import model.Zoo;
 import utils.validator.InputValidator;
@@ -15,6 +16,42 @@ import utils.validator.InputValidator;
  */
 
 public class MainView {
+
+    public static void loginAndSignup(){
+        int opt;
+        while(true){
+            MainView.printOptions();
+            opt = chooseOptions(Const.MAIN_OPTIONS_LIST.length);
+            if(opt == 1) {
+                String[] loginDetails = loginExistingZoo();
+                if(loginDetails[0] != null && loginDetails[1] != null){
+                    int zooId = MainController.loginExistingZoo(loginDetails);
+                    if (zooId > 0) {
+                        System.out.println(Const.SUCCESS_LOGIN);
+                        ZooView.zoo(zooId);
+                    }
+                    else {
+                        System.out.println(Const.ERROR_LOGIN_FAILED);
+                    }
+                }
+            }
+            else if(opt == 2) {
+                Zoo zoo = createNewZoo();
+                int zooId = MainController.createNewZoo(zoo);
+                if(zooId == -1){
+                    System.out.println(Const.ERROR_USERNAME_ALREADY_TAKEN);
+                }
+                else if (zooId > 0) {
+                    System.out.println(Const.SUCCESS_ZOO_CREATED);
+                    ZooView.zoo(zooId);
+                }
+            }
+            else if(opt == 3) {
+                return;
+            }
+        }
+
+    }
 
     public static Zoo createNewZoo(){
 
