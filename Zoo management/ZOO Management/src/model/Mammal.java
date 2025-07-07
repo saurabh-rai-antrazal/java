@@ -1,20 +1,20 @@
-package animals;
+package model;
 
 /*
  *********************************************************************************************************
- *  @Java Class Name :   Bird
+ *  @Java Class Name :   Mammal
  *  @Author          :   <Saurabh Rai>(saurabh.rai@antrazal.com)
  *  @Company         :   Antrazal
  *  @Date            :   04-07-2024
- *  @Description     :   This is the Bird class which creates the bird
+ *  @Description     :   This is the Mammal class which creates the mammal
  *********************************************************************************************************
  */
 
-public class Bird extends Animal {
+public class Mammal extends Animal {
     private String sound = "";
     private String category = "";
 
-    public Bird(String category, String name, int age, double weight, String sound, int perCageCapacity) {
+    public Mammal(String category, String name, int age, double weight, String sound, int perCageCapacity) {
         super(name, age, weight, perCageCapacity);
         this.category = category;
         this.sound = sound;

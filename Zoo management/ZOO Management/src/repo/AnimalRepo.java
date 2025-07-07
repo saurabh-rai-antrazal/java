@@ -1,6 +1,6 @@
 package repo;
 
-import animals.Animal;
+import model.Animal;
 import utils.constant.Const;
 import utils.db.DB;
 import java.sql.Connection;

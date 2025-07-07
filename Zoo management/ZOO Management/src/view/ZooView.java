@@ -1,9 +1,8 @@
 package view;
 
-import animals.*;
 import controller.ZooController;
+import model.*;
 import utils.constant.Const;
-import model.Zone;
 import utils.validator.InputValidator;
 
 import java.util.List;

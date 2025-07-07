@@ -1,6 +1,6 @@
 package service;
 
-import animals.Animal;
+import model.Animal;
 import repo.AnimalRepo;
 import utils.constant.Const;
 

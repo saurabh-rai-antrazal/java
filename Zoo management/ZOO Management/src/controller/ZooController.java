@@ -3,7 +3,7 @@ package controller;
 import java.util.List;
 import java.util.Map;
 
-import animals.Animal;
+import model.Animal;
 import service.AnimalService;
 import service.ZoneService;
 import service.ZooService;
