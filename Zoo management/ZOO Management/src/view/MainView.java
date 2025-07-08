@@ -30,6 +30,9 @@ public class MainView {
                         System.out.println(Const.SUCCESS_LOGIN);
                         ZooView.zoo(zooId);
                     }
+                    else if(zooId == -1){
+                        System.out.println(Const.ERROR_USERNAME_NOT_FOUND);
+                    }
                     else {
                         System.out.println(Const.ERROR_LOGIN_FAILED);
                     }

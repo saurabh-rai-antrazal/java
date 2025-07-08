@@ -35,9 +35,7 @@ public class AnimalService {
                 if (!rs.next()) break;
                 animalList.put(rs.getInt("animal_id"), rs.getString("animal_name"));
             }
-        } catch (SQLException e) {
-            System.out.println(Const.ERR + e.getMessage());
-        }
+        } catch (SQLException _) {}
         return animalList;
     }
 

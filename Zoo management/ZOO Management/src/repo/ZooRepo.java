@@ -81,11 +81,9 @@ public class ZooRepo {
             if (rs.next()) {
                 return rs.getInt("zoo_id");
             } else{
-                System.out.println(Const.ERROR_USERNAME_NOT_FOUND + username);
-                return 0;
+                return -1;
             }
         } catch (SQLException e) {
-            System.out.println(Const.ERR + e.getMessage());
             return 0;
         }
     }

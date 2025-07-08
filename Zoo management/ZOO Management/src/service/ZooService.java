@@ -56,7 +56,6 @@ public class ZooService {
             }
             return maxZoneCnt;
         } catch (SQLException e) {
-            System.out.println(Const.ERR + e.getMessage());
             return 0;
         }
     }

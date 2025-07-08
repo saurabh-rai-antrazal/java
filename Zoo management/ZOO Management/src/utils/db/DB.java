@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 
 public class DB {
-    
+
     private static final String DB_URL = "jdbc:mysql://localhost:3306/zoo_management";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "123456789";
@@ -24,18 +24,10 @@ public class DB {
 
     private DB() {}
 
-    public static Connection connect() {
+    public static Connection connect() throws SQLException {
         if(db == null){
-            try{
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                db = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            } catch (ClassNotFoundException e) {
-                System.out.println("Error: " + e.getMessage());
-            } catch (SQLException e) {
-                System.out.println("Error : " + e.getMessage());
-            }
+            db = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
         }
         return db;
     }
-
 }
